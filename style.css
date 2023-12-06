@@ -1,0 +1,446 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+html,
+body {
+    height: 100%;
+}
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+a {
+    color: hsla(0, 0%, 100%, 1);
+    display: block;
+    font-weight: 900;
+    line-height: 1.625;
+    text-decoration: none;
+}
+
+/* Font responsive section */
+h1 {
+    color: hsla(239, 21%, 20%, 1);
+    --font-size: var(--font-size-h1);
+    font-size: var(--font-size);
+    font-weight: 900;
+}
+h2 {
+    --font-size: var(--font-size-h2);
+    font-size: var(--font-size);
+    font-weight: 900;
+}
+p {
+    --font-size: var(--font-size-p);
+    font-size: var(--font-size);
+    font-weight: 500;
+}
+
+/* Font responsive section */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 9.25rem;
+    width: 100%;
+}
+
+/* Header section */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15.9375rem;
+    background-image: url(./assets/tablet/image-hero.png);
+    background-repeat: no-repeat;
+    background-size: 25.875rem 9.5625rem;
+    background-position: top 5.125rem center;
+    margin-top: 3rem;
+    padding-inline: 1.5rem;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+h1.header-title {
+    --font-size-h1: 2.5rem;
+    line-height: 1.1;
+    /* width: min(18.2375rem, 27.8125rem); */
+    max-width: 18.2375rem;
+    margin-bottom: 0.6em;
+}
+p.header-description {
+    color: hsla(239, 10%, 57%, 1);
+    line-height: 1.625;
+}
+.header-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.download-btn {
+    border-radius: 29px;
+    padding: 1rem 2.5rem;
+}
+.header-link .download-btn {
+    background-color: hsla(192, 37%, 48%, 1);
+}
+
+.header-link .download-btn:hover {
+    background-color: hsla(192, 54%, 64%, 1);
+}
+
+.header-link .download-btn span.download-version {
+    color: hsla(192, 90%, 77%, 1);
+}
+
+.infomation-btn {
+    border-radius: 29px;
+    background-color: hsla(267, 34%, 53%, 1);
+    padding: 1rem 1.8125rem;
+}
+
+.infomation-btn:hover {
+    background-color: hsla(267, 54%, 71%, 1);
+}
+
+/* Header section */
+
+/* Main section */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 1.75rem;
+    padding-inline: 1.5rem;
+}
+
+.section-num {
+    position: relative;
+    align-self: center;
+    color: hsla(240, 10%, 57%, 1);
+    font-weight: 900;
+    max-width: 3.5rem;
+    max-height: 3.5rem;
+    border: 1px solid hsla(240, 3%, 31%, 0.25);
+    border-radius: 29px;
+    background-color: hsla(0, 0%, 98%, 1);
+    aspect-ratio: 1;
+
+}
+
+main>.section-num {
+    padding: 1.0375em 1.1875em;
+}
+
+.section-num::before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    bottom: 100%;
+    height: 5.25rem;
+    border: 1px solid hsla(240, 10%, 57%, 0.25);
+}
+
+.user-image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem 1.5625rem;
+}
+
+.card-image {
+    flex: 0 0 151px;
+    max-width: 31.25rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+p.main-concept {
+    color: hsla(192, 37%, 48%, 1);
+    font-weight: 900;
+    letter-spacing: 0.25rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5em;
+}
+
+h2.main-title {
+    --font-size-h2: 2rem;
+    color: hsla(239, 21%, 20%, 1);
+    line-height: 1.125;
+    margin-bottom: 1em;
+}
+
+p.main-description {
+    color: hsla(239, 10%, 57%, 1);
+    line-height: 1.625;
+}
+
+span.no-wrap {
+    white-space: nowrap;
+}
+
+/* Main section */
+
+/* Footer section */
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    background-color: hsl(192, 37%, 48%);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/mobile/image-footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+}
+
+footer>.section-num {
+    margin-top: -1.75rem;
+    padding: 1.0375rem 1.0937rem;
+}
+
+.footer-content {
+    color: hsla(0, 0%, 98%, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 1.5rem 4.5rem;
+    z-index: 1;
+}
+
+h2.footer-title {
+    --font-size-h2: 2rem;
+    line-height: 1.125;
+    margin-bottom: 0.75em;
+}
+
+p.footer-description {
+    --font-size-p: 1.125rem;
+    line-height: 1.4444;
+    margin-bottom: 1.7777em;
+}
+
+.footer-content .download-btn {
+    background-color: hsla(268, 34%, 53%, 1);
+}
+
+.footer-content .download-btn span.download-version {
+    color: hsla(268, 100%, 86%, 1);
+}
+
+.footer-content .download-btn:hover {
+    background-color: hsla(268, 55%, 71%, 1);
+}
+
+/* Footer section */
+
+@media (min-width: 720px) {
+
+    .wrapper {
+        gap: 10.25rem;
+    }
+
+    /* Header section */
+
+    header {
+        gap: 27.4375rem;
+        background-size: auto;
+        background-position: top 5.75rem center;
+    }
+
+    .header-content {
+        width: 100%;
+        max-width: 28.5625rem;
+    }
+
+    h1.header-title {
+        --font-size-h1: 3rem;
+        line-height: 1;
+        max-width: 21.1875rem;
+        margin-bottom: 0.5em;
+    }
+
+    .header-link {
+        flex-direction: row;
+    }
+
+    /* Header section */
+
+    /* Main section */
+
+    main {
+        gap: 0;
+        margin-bottom: 1.75rem;
+    }
+
+    main>.section-num {
+        margin-bottom: 4.1875rem;
+    }
+
+    .user-image {
+        column-gap: 0.6875rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-image {
+        flex: 0 0 164px;
+    }
+
+    .main-content {
+        max-width: 35.8125rem;
+    }
+
+    p.main-concept {
+        margin-bottom: 1em;
+    }
+
+    h2.main-title {
+        --font-size-h2: 2.5rem;
+        max-width: 27.8125rem;
+        line-height: 1.1;
+        margin-bottom: 0.8em;
+    }
+
+    /* Main section */
+
+    /* Footer section */
+
+    footer::before {
+        background-image: url(./assets/tablet/image-footer.jpg);
+    }
+
+    .footer-content {
+        padding: 0 6.125rem 4.125rem;
+    }
+
+    h2.footer-title {
+        --font-size-h2: 2.5rem;
+        line-height: 1.1;
+        max-width: 28.5625rem;
+        margin-bottom: 0.8em;
+    }
+
+    p.footer-description {
+        margin-bottom: 2.2222em;
+    }
+
+    /* Footer section */
+}
+
+@media (min-width: 1200px) {
+
+    .wrapper {
+        gap: 11.5rem;
+    }
+
+    /* Header section */
+
+    header {
+        gap: 6.75rem;
+        background-image: url(./assets/desktop/image-hero-left.png), url(./assets/desktop/image-hero-right.png);
+        background-size: auto, auto;
+        background-position: top 5.5625rem left -2rem, top 9rem right -2rem;
+        margin-top: 5rem;
+        padding-bottom: 0.625rem;
+    }
+
+    .header-content {
+        max-width: 33.75rem;
+    }
+
+    h1.header-title {
+        --font-size-h1: 4rem;
+        max-width: 27.8125rem;
+        margin-bottom: 0.5312em;
+    }
+
+    p.header-description {
+        --font-size-p: 1.125rem;
+        line-height: 1.4444;
+    }
+
+    /* Header section */
+
+    /* Main section */
+
+    main>.section-num {
+        margin-bottom: 4rem;
+    }
+
+    .user-image {
+        column-gap: 1.875rem;
+        margin-bottom: 5rem;
+    }
+
+    .card-image {
+        flex: 0 0 255px;
+    }
+
+    p.main-description {
+        --font-size-p: 1.125rem;
+        line-height: 1.4444;
+    }
+
+    /* Main section */
+
+    /* Footer section */
+
+    footer {
+        gap: 5.5rem;
+    }
+
+    footer::before {
+        background-image: url(./assets/desktop/image-footer.jpg);
+        background-size: cover;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 0 10.3125rem 6.5rem;
+    }
+
+    h2.footer-title,
+    p.footer-description {
+        flex-basis: 350px;
+        margin: 0;
+    }
+
+    /* Footer section */
+}
